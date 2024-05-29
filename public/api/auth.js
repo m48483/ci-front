@@ -2,7 +2,7 @@ import { api } from "../config/network";
 
 export const saveBoard = async (data) => {
   const res = await axios({
-    url: "/api/boards",
+    url: `http://${window.location.host}:8080/api/boards`,
     method: "post",
     data: data,
     headers: {
@@ -15,7 +15,7 @@ export const saveBoard = async (data) => {
 
 export const getBoard = async () => {
   const res = await axios({
-    url: "/api/boards",
+    url: `http://${window.location.host}:8080/api/boards`,
     method: "get",
     data: data,
     headers: {
@@ -28,7 +28,7 @@ export const getBoard = async () => {
 
 export const delBoard = async () => {
   const res = await axios({
-    url: "/api/boards",
+    url: `http://${window.location.host}:8080/api/boards`,
     method: "delete",
     data: data,
     headers: {
