@@ -46,7 +46,6 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PASSWORD }}
-        port: ${{ secrets.PORT }}
         script: |
           docker pull ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_REPO}}
           docker rm -f ${{secrets.DOCKER_REPO}}
