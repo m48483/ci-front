@@ -45,7 +45,7 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PASSWORD }}
+        key: ${{ secrets.SSH_PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
           docker pull ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_REPO}}
