@@ -1,52 +1,21 @@
 import { api } from "../config/network";
 
 export const saveBoard = async (data) => {
-  const res = await axios({
-    url: `http://${window.location.host}:8080/api/boards`,
-    method: "post",
-    data: data,
-    headers: {
-      Authorization: localStorage.getItem("id"),
-    },
-  });
-
+  const res = await api("/api/boards", "post", data);
   return res;
 };
 
 export const getBoard = async () => {
-  const res = await axios({
-    url: `http://${window.location.host}:8080/api/boards`,
-    method: "get",
-    data: data,
-    headers: {
-      Authorization: localStorage.getItem("id"),
-    },
-  });
-
+  const res = await api("/api/boards", "get");
   return res;
 };
 
 export const delBoard = async () => {
-  const res = await axios({
-    url: `http://${window.location.host}:8080/api/boards`,
-    method: "delete",
-    data: data,
-    headers: {
-      Authorization: localStorage.getItem("id"),
-    },
-  });
-
+  const res = await api("/api/boards", "delete");
   return res;
 };
 
-export const delByBoard = async (boardId) => {
-  const res = await axios({
-    url: `/api/boards/${boardId}`,
-    method: "delete",
-    headers: {
-      Authorization: localStorage.getItem("id"),
-    },
-  });
-
+export const delByBoard = async (data) => {
+  const res = await api("/api/boards/" + data, "delete");
   return res;
 };
