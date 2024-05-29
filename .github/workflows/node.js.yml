@@ -21,8 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: cd
-      run: cd devops
+
     - name: install
       run: npm install
 
