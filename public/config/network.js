@@ -7,7 +7,7 @@ import axios from "axios";
 //async 비동기 함수
 
 export const api = async (url, method, body) => {
-  axios.defaults.baseURL = `http://${window.location.host}:8080`;
+  axios.defaults.baseURL = ``;
   const res = await axios({
     url,
     method,
